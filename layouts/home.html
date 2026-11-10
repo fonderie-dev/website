@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">fonderie-dev</p>
+      <h1>Fonderie</h1>
+      <p class="tagline">{{ site.Params.tagline }}</p>
+      <div class="lede">{{ .Content }}</div>
+      <p class="notice"><span class="notice-label">État</span> Early stage. The ateliers are scaffolds that state their scope; no model, dataset or benchmark result has been published yet.</p>
+      <p class="actions">
+        <a class="btn btn-primary" href="{{ "ateliers/" | relURL }}">The ateliers</a>
+        <a class="btn" href="{{ site.Params.github }}" rel="noopener">GitHub&nbsp;↗</a>
+      </p>
+    </div>
+    <div class="hero-mark">
+      <img src="{{ "images/fonderie.svg" | relURL }}" alt="Fonderie mark: a crucible pouring into an ingot mould whose cells read as a weight matrix" width="260" height="260">
+    </div>
+  </div>
+</section>
+
+<section class="wrap block">
+  <h2 class="section-title"><span class="kicker">La chaîne</span>From open weights to a measured model</h2>
+  {{ partial "chain.html" (dict "detailed" false) }}
+</section>
+
+<section class="wrap block">
+  <h2 class="section-title"><span class="kicker">Principes</span>How the work is held to account</h2>
+  <ol class="principles">
+    {{ range hugo.Data.principes }}
+    <li><h3>{{ .title }}</h3><p>{{ .text }}</p></li>
+    {{ end }}
+  </ol>
+  <p class="more"><a href="{{ "methode/" | relURL }}">The full method →</a></p>
+</section>
+
+<section class="wrap block">
+  <h2 class="section-title"><span class="kicker">Ailleurs</span>Related work</h2>
+  <ul class="related">
+    <li><a href="https://cttir.github.io/website/">CTTIR</a><span>Computational trauma and tissue injury research</span></li>
+    <li><a href="https://github.com/etabli-dev">Établi</a><span>Tools for research and local knowledge work</span></li>
+    <li><a href="https://r-heller.github.io/website/">R. Heller</a><span>Personal website</span></li>
+  </ul>
+</section>
+{{ end }}

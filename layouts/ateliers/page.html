@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $all := .CurrentSection.Pages.ByWeight }}
+{{ $idx := 0 }}
+{{ range $i, $p := $all }}{{ if eq $p $ }}{{ $idx = $i }}{{ end }}{{ end }}
+<article class="wrap page atelier">
+  <header class="page-head">
+    <p class="eyebrow"><a href="{{ .CurrentSection.RelPermalink }}">Ateliers</a> · {{ printf "%02d" (add $idx 1) }}</p>
+    <h1>{{ .Title }} <span class="gloss">{{ .Params.gloss }}</span></h1>
+    <p class="lede">{{ .Params.summary }}</p>
+    <p class="etymology">{{ .Params.etymology }}</p>
+  </header>
+  <div class="atelier-grid">
+    <div class="prose">{{ .Content }}</div>
+    <aside class="facts" aria-label="Facts">
+      <dl>
+        <dt>Status</dt><dd>{{ partial "stamp.html" .Params.status }}</dd>
+        <dt>Repository</dt><dd><a href="https://github.com/{{ .Params.repo }}" rel="noopener"><code>{{ .Params.repo }}</code></a></dd>
+        <dt>Language</dt><dd>Python ≥ 3.11</dd>
+        <dt>Licence</dt><dd>Apache-2.0</dd>
+      </dl>
+    </aside>
+  </div>
+  <nav class="pager" aria-label="Other ateliers">
+    {{ if gt $idx 0 }}{{ with index $all (sub $idx 1) }}<a class="prev" href="{{ .RelPermalink }}"><span>Previous</span>← {{ .Title }}</a>{{ end }}{{ end }}
+    {{ if lt (add $idx 1) (len $all) }}{{ with index $all (add $idx 1) }}<a class="next" href="{{ .RelPermalink }}"><span>Next</span>{{ .Title }} →</a>{{ end }}{{ end }}
+  </nav>
+</article>
+{{ end }}

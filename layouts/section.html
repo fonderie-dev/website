@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="wrap page">
+  <header class="page-head">
+    <p class="eyebrow">Fonderie</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lede }}<p class="lede">{{ . }}</p>{{ end }}
+  </header>
+  {{ partial "chain.html" (dict "detailed" true) }}
+  {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+</div>
+{{ end }}

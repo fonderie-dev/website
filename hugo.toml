@@ -1,0 +1,29 @@
+baseURL = "https://fonderie-dev.github.io/website/"
+locale = "en"
+defaultContentLanguage = "en"
+title = "Fonderie"
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
+
+[params]
+  author = "R. Heller"
+  description = "Fonderie — AI model engineering for scientific work: training, weight inspection and reproducible evaluation of open models."
+  tagline = "AI model engineering for scientific work."
+  github = "https://github.com/fonderie-dev"
+  impressum = "https://r-heller.github.io/website/impressum/"
+  since = 2026
+
+[[menus.main]]
+  name = "Ateliers"
+  pageRef = "/ateliers"
+  weight = 1
+
+[[menus.main]]
+  name = "Méthode"
+  pageRef = "/methode"
+  weight = 2
+
+[[menus.main]]
+  name = "À propos"
+  pageRef = "/a-propos"
+  weight = 3

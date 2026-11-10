@@ -1,0 +1,14 @@
+{{ $detailed := .detailed }}
+<ol class="chain">
+  {{ range $i, $p := (site.GetPage "/ateliers").Pages.ByWeight }}
+  <li class="chain-step">
+    <span class="num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
+    <a class="card" href="{{ $p.RelPermalink }}">
+      <h3>{{ $p.Title }} <span class="gloss">{{ $p.Params.gloss }}</span></h3>
+      <p>{{ $p.Params.summary }}</p>
+      {{ if $detailed }}<p class="etymology">{{ $p.Params.etymology }}</p>{{ end }}
+      {{ partial "stamp.html" $p.Params.status }}
+    </a>
+  </li>
+  {{ end }}
+</ol>

@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{ "" | relURL }}">
+      <img src="{{ "images/fonderie.svg" | relURL }}" alt="" width="32" height="32">
+      <span>Fonderie</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      {{ $current := . }}
+      {{ range site.Menus.main }}
+        {{ $active := $current.IsMenuCurrent "main" . }}
+        {{ with .Page }}{{ if $current.IsDescendant . }}{{ $active = true }}{{ end }}{{ end }}
+        <a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+      <a href="{{ site.Params.github }}" rel="noopener">GitHub&nbsp;↗</a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,10 @@
+- title: Open weights, local first
+  text: Work starts from models whose weights and licence permit inspection, modification and local use, on hardware under our control.
+- title: Reproducible by record
+  text: Every run records the base model revision, data manifest, configuration, seed, software and hardware. A result without its record is not reported.
+- title: Weights are artefacts
+  text: Checkpoints, datasets and run outputs stay out of git and are released, if at all, to an archive with a persistent identifier and a model card.
+- title: Safe loading
+  text: Weights are read from safetensors. Pickle checkpoints and remote model code are not used without review.
+- title: Stated scope
+  text: Each atelier says what is implemented and verified, and what is not.

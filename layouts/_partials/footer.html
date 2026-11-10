@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="wrap">
+    {{ partial "ingot.html" . }}
+    <div class="foot-grid">
+      <div>
+        <p class="foot-name">Fonderie</p>
+        <p class="foot-tag">{{ site.Params.tagline }}</p>
+      </div>
+      <nav class="foot-nav" aria-label="Footer">
+        {{ range site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}
+        <a href="{{ site.Params.github }}" rel="noopener">GitHub</a>
+        <a href="{{ site.Params.impressum }}" rel="noopener">Impressum</a>
+        <a href="{{ "datenschutz/" | relURL }}">Datenschutz</a>
+      </nav>
+    </div>
+    <p class="fine">© {{ site.Params.since }}{{ if gt now.Year site.Params.since }}–{{ now.Year }}{{ end }} {{ site.Params.author }} · Code under Apache-2.0 · Static site: no cookies, no trackers, no third-party requests.</p>
+  </div>
+</footer>
