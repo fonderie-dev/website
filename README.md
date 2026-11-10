@@ -3,7 +3,7 @@
 Source of <https://fonderie-dev.github.io/website/>: a static Hugo site with
 its own templates and stylesheet and no theme module. The only script is the
 cookie-free Plausible statistics snippet served from the maintainer's own
-analytics server (analytics.hellebo.de); there are no third-party requests.
+analytics server; there are no third-party requests.
 
 ## Build locally
 
