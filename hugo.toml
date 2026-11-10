@@ -23,6 +23,11 @@ enableRobotsTXT = true
   weight = 2
 
 [[menus.main]]
+  name = "Publications"
+  pageRef = "/publications"
+  weight = 3
+
+[[menus.main]]
   name = "À propos"
   pageRef = "/a-propos"
-  weight = 3
+  weight = 4
