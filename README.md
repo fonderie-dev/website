@@ -15,8 +15,9 @@ hugo --gc --minify --panicOnWarning          # production build into public/
 python3 tools/check_links.py public /website/
 ```
 
-Pushes to `main` build, check internal links and deploy to GitHub Pages.
-Pull requests build and check without deploying.
+Pushes to `main` build, check internal links and deploy to GitHub Pages
+(`.github/workflows/pages.yaml`). Pull requests build and check without
+deploying.
 
 ## Layout
 
