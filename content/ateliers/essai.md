@@ -4,6 +4,7 @@ gloss: "assay"
 weight: 3
 status: 0
 repo: "fonderie-dev/fonderie-essai"
+site: "https://fonderie-dev.github.io/fonderie-essai/"
 summary: "Reproducible evaluation of models on scientific tasks."
 etymology: "An essai is the assay: the test that establishes what a casting actually contains."
 ---

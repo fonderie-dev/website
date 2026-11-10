@@ -8,6 +8,10 @@
     <h1>{{ .Title }} <span class="gloss">{{ .Params.gloss }}</span></h1>
     <p class="lede">{{ .Params.summary }}</p>
     <p class="etymology">{{ .Params.etymology }}</p>
+    <p class="actions">
+      {{ with .Params.site }}<a class="btn btn-primary" href="{{ . }}">Project site&nbsp;↗</a>{{ end }}
+      <a class="btn" href="https://github.com/{{ .Params.repo }}" rel="noopener">Repository&nbsp;↗</a>
+    </p>
   </header>
   <div class="atelier-grid">
     <div class="prose">{{ .Content }}</div>
@@ -15,6 +19,7 @@
       <dl>
         <dt>Status</dt><dd>{{ partial "stamp.html" .Params.status }}</dd>
         <dt>Repository</dt><dd><a href="https://github.com/{{ .Params.repo }}" rel="noopener"><code>{{ .Params.repo }}</code></a></dd>
+        {{ with .Params.site }}<dt>Project site</dt><dd><a href="{{ . }}"><code>{{ strings.TrimSuffix "/" (strings.TrimPrefix "https://" .) }}</code></a></dd>{{ end }}
         <dt>Language</dt><dd>Python ≥ 3.11</dd>
         <dt>Licence</dt><dd>Apache-2.0</dd>
       </dl>

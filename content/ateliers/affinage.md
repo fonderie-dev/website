@@ -4,6 +4,7 @@ gloss: "refining"
 weight: 1
 status: 0
 repo: "fonderie-dev/fonderie-affinage"
+site: "https://fonderie-dev.github.io/fonderie-affinage/"
 summary: "Training and fine-tuning open models on domain data, packaged as customised local models."
 etymology: "Affinage is the refining of molten metal: removing impurities until it reaches a specified composition."
 ---

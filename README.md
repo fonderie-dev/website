@@ -31,7 +31,9 @@ tools/check_links.py  internal link and anchor check for the built site
 
 An atelier's status stamp comes from `status` in its front matter (0 scaffold,
 1 draft, 2 usable, 3 released). Keep it in step with the repository README
-and the organisation profile.
+and the organisation profile. Its `repo` and `site` front matter link the
+repository and the atelier's project site, which is built from that
+repository's `docs/`.
 
 `content/impressum.md` and `content/datenschutz.md` hold this site's Impressum
 and privacy notice.

@@ -4,6 +4,7 @@ gloss: "engraving"
 weight: 2
 status: 0
 repo: "fonderie-dev/fonderie-burin"
+site: "https://fonderie-dev.github.io/fonderie-burin/"
 summary: "Inspecting and editing the weights of open models."
 etymology: "A burin is the engraver's chisel, used to cut fine lines into finished metal."
 ---
