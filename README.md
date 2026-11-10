@@ -1,8 +1,9 @@
 # Fonderie website
 
 Source of <https://fonderie-dev.github.io/website/>: a static Hugo site with
-its own templates and stylesheet, no theme module, no JavaScript and no
-third-party requests.
+its own templates and stylesheet and no theme module. The only script is the
+cookie-free Plausible statistics snippet served from the maintainer's own
+analytics server (analytics.hellebo.de); there are no third-party requests.
 
 ## Build locally
 
@@ -32,8 +33,8 @@ An atelier's status stamp comes from `status` in its front matter (0 scaffold,
 1 draft, 2 usable, 3 released). Keep it in step with the repository README
 and the organisation profile.
 
-The Impressum is the one on <https://r-heller.github.io/website/impressum/>;
-`content/datenschutz.md` covers this site.
+`content/impressum.md` and `content/datenschutz.md` hold this site's Impressum
+and privacy notice.
 
 ## Licence
 

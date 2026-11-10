@@ -10,7 +10,6 @@ enableRobotsTXT = true
   description = "Fonderie — AI model engineering for scientific work: training, weight inspection and reproducible evaluation of open models."
   tagline = "AI model engineering for scientific work."
   github = "https://github.com/fonderie-dev"
-  impressum = "https://r-heller.github.io/website/impressum/"
   since = 2026
 
 [[menus.main]]
